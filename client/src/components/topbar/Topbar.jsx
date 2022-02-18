@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./topbar.css";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
@@ -14,10 +15,13 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 function Topbar() {
+  const PF = process.env.REACT_APP_PUBLIC_FOLDER;
   return (
     <div className="topbarContainer">
       <div className="topbarLeft">
-        <span className="Logo">SocialHub</span>
+        <Link to="/" className="link">
+          <h3 className="Logo">SocialHub</h3>
+        </Link>
       </div>
       <div className="topbarCenter">
         <div className="searchBar">
@@ -45,7 +49,7 @@ function Topbar() {
             <FontAwesomeIcon icon={faInbox} className="topbarIconIcon" />
             <span className="topbarIconItemBadge">1</span>
           </button>
-          <img src="./assets/person/1.jpg" className="topbarProfile" />
+          <img src={`${PF}person/1.jpg`} className="topbarProfile" />
         </div>
       </div>
     </div>

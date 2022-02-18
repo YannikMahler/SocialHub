@@ -2,18 +2,20 @@ import React from "react";
 import "./rightbar.css";
 import { Users } from "../../dummyData";
 import Online from "../online/Online";
+import { faGift } from "@fortawesome/free-solid-svg-icons";
 
 function Rightbar({ profile }) {
+  const PF = process.env.REACT_APP_PUBLIC_FOLDER;
   const HomeRightbar = () => {
     return (
       <>
         <div className="birthdayBox">
-          <img src="/assets/gift.png" alt="" className="birthdayImg" />
+          <img src={`${PF}gift.png`} alt="" className="birthdayImg" />
           <span className="birthdayText">
             <b>Marius Tie</b> and <b>3 other Friends</b> have Birthday today
           </span>
         </div>
-        <img src="/assets/ad.webp" alt="Ad" className="rightbarAd" />
+        <img src={`${PF}ad.webp`} alt="Ad" className="rightbarAd" />
         <h4 className="rightbarTitle">Online Friends</h4>
         <ul className="rightbarFriendList">
           {Users.map((u) => (
@@ -49,7 +51,7 @@ function Rightbar({ profile }) {
           <div className="rightbarFollowings">
             <div className="rightbarFollowing">
               <img
-                src="/assets/person/2.jpg"
+                src={`${PF}person/2.jpg`}
                 alt=""
                 className="rightbarFollowingImg"
               />
@@ -57,7 +59,7 @@ function Rightbar({ profile }) {
             </div>
             <div className="rightbarFollowing">
               <img
-                src="/assets/person/3.jpg"
+                src={`${PF}person/3.jpg`}
                 alt=""
                 className="rightbarFollowingImg"
               />
@@ -65,35 +67,35 @@ function Rightbar({ profile }) {
             </div>
             <div className="rightbarFollowing">
               <img
-                src="/assets/person/2.jpg"
+                src={`${PF}person/4.jpg`}
                 alt=""
                 className="rightbarFollowingImg"
               />
-              <span className="rightbarFollowingName">Ayleen</span>
+              <span className="rightbarFollowingName">Paul ED</span>
             </div>
             <div className="rightbarFollowing">
               <img
-                src="/assets/person/2.jpg"
+                src={`${PF}person/5.webp`}
                 alt=""
                 className="rightbarFollowingImg"
               />
-              <span className="rightbarFollowingName">Ayleen</span>
+              <span className="rightbarFollowingName">Lisa</span>
             </div>
             <div className="rightbarFollowing">
               <img
-                src="/assets/person/2.jpg"
+                src={`${PF}person/6.jpg`}
                 alt=""
                 className="rightbarFollowingImg"
               />
-              <span className="rightbarFollowingName">Ayleen</span>
+              <span className="rightbarFollowingName">Coach Esume</span>
             </div>
             <div className="rightbarFollowing">
               <img
-                src="/assets/person/2.jpg"
+                src={`${PF}person/7.jpeg`}
                 alt=""
                 className="rightbarFollowingImg"
               />
-              <span className="rightbarFollowingName">Ayleen</span>
+              <span className="rightbarFollowingName">Tom Brady</span>
             </div>
           </div>
         </div>
@@ -103,7 +105,7 @@ function Rightbar({ profile }) {
   return (
     <div className="rightbar">
       <div className="rightWrapper">
-        <HomeRightbar />
+        {profile ? <ProfileRightbar /> : <HomeRightbar />}
       </div>
     </div>
   );
