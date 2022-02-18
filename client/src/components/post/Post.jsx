@@ -3,7 +3,7 @@ import "./post.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "@fortawesome/fontawesome-svg-core";
 import { faEllipsisV } from "@fortawesome/free-solid-svg-icons";
-import { Users } from "../../dummydata";
+import { Users } from "../../dummyData";
 import { useState } from "react";
 
 function Post({ post }) {
@@ -46,7 +46,7 @@ function Post({ post }) {
               className="likeIcon"
               onClick={likeHandler}
             />
-            <img src="/assets/heart.png" alt="" className="likeIcon" />
+            <img src="/assets/heart.jpg" alt="" className="likeIcon" />
             <span className="postLikeCounter">{like} people like it</span>
           </div>
           <div className="postBottomRight">

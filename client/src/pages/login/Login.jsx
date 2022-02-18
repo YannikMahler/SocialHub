@@ -14,13 +14,13 @@ function Login() {
     <div className="login">
       <div className="loginWrapper">
         <div className="loginHome">
-          <FontAwesomeIcon icon={faArrowLeft} className="homeIcon" />
-          <span className="homeText">Back home</span>
+          <Link to="/">
+            <FontAwesomeIcon icon={faArrowLeft} className="homeIcon" />
+            <span className="homeText">Back home</span>
+          </Link>
         </div>
         <div className="loginTop">
-          <div className="imgDiv">
-            <img src="./assets/SocialHub.png" alt="logo" className="logoImg" />
-          </div>
+          <span className="Logo">SocialHub</span>
         </div>
         <div className="loginCenter">
           <div className="loginFields">
@@ -40,6 +40,7 @@ function Login() {
           <button className="loginButton">Log in</button>
           <span className="loginForgot">Forgot Password</span>
           <br />
+          <span className="newUser">New here?</span>
           <span className="loginRegister">Create a New Account</span>
         </div>
       </div>

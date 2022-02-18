@@ -1,6 +1,6 @@
 import React from "react";
 import "./rightbar.css";
-import { Users } from "../../dummydata";
+import { Users } from "../../dummyData";
 import Online from "../online/Online";
 
 function Rightbar({ profile }) {
@@ -13,7 +13,7 @@ function Rightbar({ profile }) {
             <b>Marius Tie</b> and <b>3 other Friends</b> have Birthday today
           </span>
         </div>
-        <img src="/assets/ad.jpeg" alt="Ad" className="rightbarAd" />
+        <img src="/assets/ad.webp" alt="Ad" className="rightbarAd" />
         <h4 className="rightbarTitle">Online Friends</h4>
         <ul className="rightbarFriendList">
           {Users.map((u) => (
@@ -57,11 +57,11 @@ function Rightbar({ profile }) {
             </div>
             <div className="rightbarFollowing">
               <img
-                src="/assets/person/2.jpg"
+                src="/assets/person/3.jpg"
                 alt=""
                 className="rightbarFollowingImg"
               />
-              <span className="rightbarFollowingName">Ayleen</span>
+              <span className="rightbarFollowingName">Alex Durden</span>
             </div>
             <div className="rightbarFollowing">
               <img
@@ -103,7 +103,7 @@ function Rightbar({ profile }) {
   return (
     <div className="rightbar">
       <div className="rightWrapper">
-        <ProfileRightbar />
+        <HomeRightbar />
       </div>
     </div>
   );

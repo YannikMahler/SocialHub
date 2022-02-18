@@ -1,12 +1,17 @@
 .topbarContainer {
   height: 60px;
   width: 100%;
-  background-color: #0d6efd;
   display: flex;
   position: sticky;
   top: 0;
   z-index: 999;
   align-items: center;
+  background: rgb(211, 131, 18);
+  background: linear-gradient(
+    160deg,
+    rgba(211, 131, 18, 1) 0%,
+    rgba(168, 50, 121, 1) 100%
+  );
 }
 
 .topbarLeft {
@@ -14,12 +19,10 @@
 }
 
 .Logo {
+  color: #fff;
   margin-left: 20px;
   font-size: 30px;
   font-weight: 900;
-  background-image: linear-gradient(-90deg, #d38312, #a83279);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 .topbarCenter {
@@ -51,6 +54,7 @@
 
 .topbarRight {
   flex: 4;
+  margin-right: 10px;
 }
 
 .topbarIcons {

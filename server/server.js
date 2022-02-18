@@ -14,7 +14,7 @@ mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true }, () => {
   console.log("Connected to MongoDB");
 });
 
-// Middleware
+// Middleware s
 app.use(express.json());
 app.use(helmet());
 app.use(morgan("common"));

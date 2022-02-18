@@ -31,6 +31,14 @@
   flex-direction: column;
   align-items: center;
 }
+.Logo {
+  margin-left: 20px;
+  font-size: 40px;
+  font-weight: 900;
+  background-image: linear-gradient(-90deg, #d38312, #a83279);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
 .loginCenter {
   display: flex;
@@ -100,4 +108,13 @@
 .loginButton:hover {
   box-shadow: none;
   color: white;
+}
+
+.loginForgot {
+  margin-bottom: 20px;
+}
+
+.newUser {
+  font-weight: 700;
+  margin-bottom: 5px;
 }

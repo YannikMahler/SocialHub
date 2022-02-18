@@ -15,13 +15,13 @@ function Register() {
     <div className="register">
       <div className="registerWrapper">
         <div className="registerHome">
-          <FontAwesomeIcon icon={faArrowLeft} className="homeIcon" />
-          <span className="homeText">Back home</span>
+          <Link to="/" class="links">
+            <FontAwesomeIcon icon={faArrowLeft} className="homeIcon" />
+            <span className="homeText">Back home</span>
+          </Link>
         </div>
         <div className="registerTop">
-          <div className="imgDiv">
-            <img src="./assets/SocialHub.png" alt="logo" className="logoImg" />
-          </div>
+          <span className="Logo">SocialHub</span>
         </div>
         <div className="registerCenter">
           <div className="registerFields">
@@ -54,10 +54,11 @@ function Register() {
           </div>
         </div>
         <div className="registerBottom">
-          <button className="registerButton">Log in</button>
-          <span className="registerForgot">Forgot Password?</span>
-          <br />
-          <span className="registerRegister">Create a New Account</span>
+          <button className="registerButton">Register</button>
+          <span className="memberInfo">Already Member?</span>
+          <Link to="/login">
+            <span className="loginRegister">Login</span>
+          </Link>
         </div>
       </div>
     </div>

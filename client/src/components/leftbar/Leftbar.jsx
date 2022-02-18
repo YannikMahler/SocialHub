@@ -1,8 +1,7 @@
 import React from "react";
 import "./leftbar.css";
-import { Users } from "../../dummydata";
+import { Users } from "../../dummyData";
 import CloseFriend from "../closeFriend/CloseFriend";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "@fortawesome/fontawesome-svg-core";
 import {
