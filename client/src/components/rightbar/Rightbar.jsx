@@ -4,7 +4,7 @@ import { Users } from "../../dummyData";
 import Online from "../online/Online";
 import { faGift } from "@fortawesome/free-solid-svg-icons";
 
-function Rightbar({ profile }) {
+function Rightbar({ user }) {
   const PF = process.env.REACT_APP_PUBLIC_FOLDER;
   const HomeRightbar = () => {
     return (
@@ -31,21 +31,27 @@ function Rightbar({ profile }) {
       <>
         <h4 className="rightbarTitle">User information</h4>
         <div className="rightbarInfo">
-          <div className="rightbarInfoItem">
+          {/* <div className="rightbarInfoItem">
             <span className="rightbarInfoKey">Birthday:</span>
             <span className="rightbarInfoValue">01.01.2000</span>
-          </div>
+          </div> */}
           <div className="rightbarInfoItem">
             <span className="rightbarInfoKey">City:</span>
-            <span className="rightbarInfoValue">Hamburg</span>
+            <span className="rightbarInfoValue">{user.city}</span>
           </div>
           <div className="rightbarInfoItem">
             <span className="rightbarInfoKey">Country:</span>
-            <span className="rightbarInfoValue">Germany 🇩🇪</span>
+            <span className="rightbarInfoValue">{user.from}</span>
           </div>
           <div className="rightbarInfoItem">
             <span className="rightbarInfoKey">Relationship:</span>
-            <span className="rightbarInfoValue">Single</span>
+            <span className="rightbarInfoValue">
+              {user.relationship === 1
+                ? "Single"
+                : user.relationship === 1
+                ? "Married"
+                : "-"}
+            </span>
           </div>
           <h4 className="rightbarTitle">User friends</h4>
           <div className="rightbarFollowings">
@@ -105,7 +111,7 @@ function Rightbar({ profile }) {
   return (
     <div className="rightbar">
       <div className="rightWrapper">
-        {profile ? <ProfileRightbar /> : <HomeRightbar />}
+        {user ? <ProfileRightbar /> : <HomeRightbar />}
       </div>
     </div>
   );

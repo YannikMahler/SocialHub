@@ -26,6 +26,10 @@
   padding-left: 15px;
 }
 
+.link {
+  text-decoration: none;
+}
+
 .registerTop {
   display: flex;
   flex-direction: column;
@@ -75,15 +79,6 @@
   outline: none;
 }
 
-/* Bottom */
-
-.registerBottom {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 20px;
-}
-
 .registerButton {
   width: 40%;
   height: 40px;
@@ -104,6 +99,19 @@
   font-size: 20px;
   cursor: pointer;
   margin-bottom: 15px;
+  margin-top: 20px;
+}
+
+.loginButton:disabled {
+  cursor: not-allowed;
+}
+/* Bottom */
+
+.registerBottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
 }
 
 .registerButton:hover {
@@ -114,9 +122,4 @@
 .memberInfo {
   font-weight: 700;
   margin-bottom: 5px;
-}
-
-Link {
-  text-decoration: none;
-  color: black;
 }

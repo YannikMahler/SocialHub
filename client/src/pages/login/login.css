@@ -25,6 +25,9 @@
   padding-top: 10px;
   padding-left: 15px;
 }
+.link {
+  text-decoration: none;
+}
 
 .loginTop {
   display: flex;
@@ -74,15 +77,6 @@
   outline: none;
 }
 
-/* Bottom */
-
-.loginBottom {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 20px;
-}
-
 .loginButton {
   width: 40%;
   height: 40px;
@@ -100,9 +94,22 @@
   background-origin: border-box;
   background-clip: content-box, border-box;
   box-shadow: 2px 1000px 1px #fff inset;
-  font-size: 20px;
+  font-size: 25px;
   cursor: pointer;
   margin-bottom: 15px;
+  margin-top: 20px;
+}
+
+.loginButton:disabled {
+  cursor: not-allowed;
+}
+/* Bottom */
+
+.loginBottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
 }
 
 .loginButton:hover {

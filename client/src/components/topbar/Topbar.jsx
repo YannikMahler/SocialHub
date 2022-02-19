@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import "./topbar.css";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -13,9 +13,12 @@ import {
   faCaretDown,
   faPlus,
 } from "@fortawesome/free-solid-svg-icons";
+import { AuthContext } from "../../context/AuthContext";
 
 function Topbar() {
   const PF = process.env.REACT_APP_PUBLIC_FOLDER;
+
+  const { user } = useContext(AuthContext);
   return (
     <div className="topbarContainer">
       <div className="topbarLeft">
@@ -49,7 +52,16 @@ function Topbar() {
             <FontAwesomeIcon icon={faInbox} className="topbarIconIcon" />
             <span className="topbarIconItemBadge">1</span>
           </button>
-          <img src={`${PF}person/1.jpg`} className="topbarProfile" />
+          <Link to={`/profile/${user.username}`}>
+            <img
+              src={
+                user.profilePicture
+                  ? PF + user.profilePicture
+                  : PF + "person/noAvatar.jpg"
+              }
+              className="topbarProfile"
+            />
+          </Link>
         </div>
       </div>
     </div>
