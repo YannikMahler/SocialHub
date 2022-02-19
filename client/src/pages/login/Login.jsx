@@ -14,7 +14,7 @@ import { AuthContext } from "../../context/AuthContext";
 function Login() {
   const email = useRef();
   const password = useRef();
-  const { user, isFetching, error, dispatch } = useContext(AuthContext);
+  const { user, isFetching, dispatch } = useContext(AuthContext);
 
   const handleClick = (e) => {
     e.preventDefault();
@@ -23,6 +23,7 @@ function Login() {
       dispatch
     );
   };
+
   console.log(user);
   return (
     <div className="login">
